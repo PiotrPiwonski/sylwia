@@ -1,0 +1,97 @@
+.offer_medium {
+  grid-area: offer_large;
+  width: 0;
+  overflow: hidden;
+  height: 0;
+  background-color: white;
+  position: fixed;
+  top: 60vh;
+  z-index: 1;
+
+  &__title {
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    margin-top: 5px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    grid-template-rows: auto;
+    grid-template-areas: "business  teacher creator youth senior";
+    justify-content: space-around;
+    // align-content: flex-end;
+    margin-top: 0;
+    list-style: none;
+  }
+
+  &__item {
+    // margin-top: 10px;
+    position: relative;
+    // align-content: space-between;
+    // align-content: end;
+  }
+
+  &__item:nth-child(1) {
+    grid-area: business;
+  }
+  &__item:nth-child(2) {
+    grid-area: teacher;
+  }
+  &__item:nth-child(3) {
+    grid-area: creator;
+  }
+  &__item:nth-child(4) {
+    grid-area: youth;
+  }
+  &__item:nth-child(5) {
+    grid-area: senior;
+  }
+  &__image {
+    position: absolute;
+    // border-radius: 20px;
+    // z-index: 1;
+    // width: 100%;
+    // height: 100%;
+
+    & img {
+      // width: 100%;
+      // height: 140px;
+      border-radius: 20px;
+      z-index: 1;
+    }
+    & img:hover {
+      opacity: 0.6;
+    }
+  }
+  &__link {
+    position: absolute;
+    top: 21.5vh;
+    left: 0;
+    right: 0;
+
+    // width: 100%;
+    // height: 100%;
+    text-decoration: none;
+    color: black;
+    // border-bottom: 1px solid rgba(204, 204, 204, 0.7);
+    font-size: 2.8rem;
+    text-align: center;
+    // padding: 10px 0;
+    // text-transform: uppercase;
+    transition: 0.15s;
+    // background-color: rgba(204, 204, 204, 0.7);
+    z-index: 2;
+  }
+
+  &__link:hover {
+    margin-top: 10px;
+    color: #ccc;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1399px) {
+    width: 100%;
+    height: 35vh;
+  }
+}

@@ -1,0 +1,31 @@
+@import "reset";
+@import "subpage_wrapper";
+@import "menu_small";
+@import "menu_large";
+@import "content_how";
+.menu_small {
+  .navigation {
+    height: 85vh;
+  }
+}
+.content {
+  grid-area: content;
+  // height: 5vh;
+  // background-color: #666;
+  position: relative;
+  top: 20vh;
+  width: 100%;
+  margin: 0 auto;
+  // z-index: 1;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-template-areas:
+    "content__title"
+    "content__subtitle"
+    "content__image"
+    "content__article"
+    "content__image1"
+    "content__article1"
+    "content__footer";
+}

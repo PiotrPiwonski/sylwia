@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+html {
+  font-size: 10px;
+  font-family: "Scope One", serif;
+}
+
+.wrapper {
+  position: relative;
+  // background-color: #ddd;
+  // height: 100vh;
+  max-width: 100%;
+  // width: 100%;
+  // min-width: 300px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 0 auto;
+  grid-template-areas:
+    "menu_small"
+    "menu_large"
+    "content";
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    max-width: 100%;
+    grid-template-rows: 0 auto auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

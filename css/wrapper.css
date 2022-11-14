@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+.wrapper {
+  background-color: #ddd;
+  height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto 0 auto 0 auto 0 auto;
+      grid-template-rows: auto 0 auto 0 auto 0 auto;
+      grid-template-areas: "menu_small" "menu_large" "slider_small" "slider_large" "offer_small" "offer_large" "footer";
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    -ms-grid-rows: 0 auto 0 auto 0 auto auto;
+        grid-template-rows: 0 auto 0 auto 0 auto auto;
+  }
+}
+
+.menu_small {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: menu_small;
+  height: 15vh;
+  background-color: blue;
+}
+
+@media (min-width: 1024px) {
+  .menu_small {
+    width: 0;
+    overflow: hidden;
+    height: 0;
+  }
+}
+
+.menu_large {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: menu_large;
+  width: 0;
+  overflow: hidden;
+  height: 0;
+  background-color: cadetblue;
+}
+
+@media (min-width: 1024px) {
+  .menu_large {
+    width: 100%;
+    height: 15vh;
+  }
+}
+
+.slider_small {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: slider_small;
+  height: 40vh;
+  background-color: red;
+}
+
+@media (min-width: 1024px) {
+  .slider_small {
+    width: 0;
+    overflow: hidden;
+    height: 0;
+  }
+}
+
+.slider_large {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: slider_large;
+  width: 0;
+  overflow: hidden;
+  height: 0;
+  background-color: orangered;
+}
+
+@media (min-width: 1024px) {
+  .slider_large {
+    width: 100%;
+    height: 40vh;
+  }
+}
+
+.offer_small {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: offer_small;
+  height: 40vh;
+  background-color: yellow;
+}
+
+@media (min-width: 1024px) {
+  .offer_small {
+    width: 0;
+    overflow: hidden;
+    height: 0;
+  }
+}
+
+.offer_large {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: offer_large;
+  width: 0;
+  overflow: hidden;
+  height: 0;
+  background-color: yellowgreen;
+}
+
+@media (min-width: 1024px) {
+  .offer_large {
+    width: 100%;
+    height: 40vh;
+  }
+}
+
+.footer {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  height: 5vh;
+  background-color: #666;
+}
+/*# sourceMappingURL=wrapper.css.map */

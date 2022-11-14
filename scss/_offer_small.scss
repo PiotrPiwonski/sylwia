@@ -1,0 +1,244 @@
+.offer_small {
+  grid-area: offer_small;
+  height: 36vh;
+  // background-color: yellow;
+  position: fixed;
+  top: 59vh;
+  width: 100%;
+  overflow: hidden;
+  // z-index: 1;
+  // &__container {
+  //   position: relative;
+  //   width: 100%;
+  //   height: 100%;
+  //   overflow: hidden;
+  // }
+
+  .slide {
+    opacity: 0;
+    z-index: 0;
+
+    &__image {
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__title-container {
+      overflow: hidden;
+      position: absolute;
+      top: 30%;
+      right: 11%;
+      left: 8%;
+      // width: 275px;
+      // width: 100%;
+      height: 40px;
+    }
+    &__title {
+      position: absolute;
+      top: 30%;
+      left: 5%;
+
+      color: white;
+      // background-color: rgba(150, 150, 150, 0.8);
+      background-color: rgba(0, 0, 0, 0.6);
+      font-size: 2rem;
+      text-align: center;
+      text-decoration: none;
+      // width: 270px;
+      width: 100%;
+      opacity: 0;
+      transition: all 1s;
+      z-index: 2;
+
+      &.active {
+        opacity: 1;
+        // left: 10%;
+        animation: text 3s linear forwards infinite;
+
+        @keyframes text {
+          0%,
+          15% {
+            transform: translateY(100%);
+          }
+
+          22%,
+          80% {
+            transform: translateY(0);
+          }
+
+          85%,
+          100% {
+            transform: translateY(100%);
+          }
+        }
+      }
+    }
+
+    &__divider_container {
+      position: absolute;
+      display: flex;
+      bottom: 2px;
+      left: 12%;
+      right: 10%;
+      // width: 250px;
+      // height: 40px;
+      z-index: 2;
+      // background-color: #fff;
+
+      .divider_left_container,
+      .divider_right_container {
+        width: 50%;
+        height: 2px;
+        overflow: hidden;
+      }
+
+      .divider_left {
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0;
+
+        &.active {
+          opacity: 1;
+          animation: divider-left 3s linear forwards infinite;
+
+          @keyframes divider-left {
+            0%,
+            5% {
+              transform: translateX(100%);
+            }
+
+            10%,
+            90% {
+              transform: translateX(0);
+            }
+
+            95%,
+            100% {
+              transform: translateX(100%);
+            }
+          }
+        }
+      }
+
+      .divider_right {
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0;
+
+        &.active {
+          opacity: 1;
+          animation: divider-right 3s linear forwards infinite;
+
+          @keyframes divider-right {
+            0%,
+            5% {
+              transform: translateX(-100%);
+            }
+
+            10%,
+            90% {
+              transform: translateX(0);
+            }
+
+            95%,
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+        }
+      }
+    }
+
+    &.active {
+      z-index: 1;
+      opacity: 1;
+    }
+  }
+
+  .buttons {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+    &__button {
+      width: 50px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: rgba(250, 250, 250, 0.1);
+      }
+
+      &:hover .buttons__arrow {
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    &__arrow {
+      color: rgba(0, 0, 0, 0.9);
+      font-size: 3rem;
+    }
+  }
+
+  .dots {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+
+    &__button {
+      flex-basis: 10px;
+      height: 10px;
+      border: 2px solid #000;
+      border-radius: 50%;
+      background-color: transparent;
+      cursor: pointer;
+      transition: all 0.3s;
+      outline: none;
+
+      &:hover {
+        background-color: #000;
+      }
+    }
+
+    .active {
+      background-color: #000;
+    }
+
+    &__time-container {
+      position: relative;
+      width: 100%;
+      margin-top: 5px;
+      background-color: rgba(0, 0, 0, 0.3);
+      height: 1px;
+    }
+
+    &__time-indicator {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+      height: 1px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    width: 0;
+    overflow: hidden;
+    height: 0;
+  }
+}

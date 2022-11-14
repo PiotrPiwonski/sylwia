@@ -1,0 +1,10 @@
+@import "reset";
+@import "subpage_wrapper";
+@import "menu_small";
+@import "menu_large";
+@import "content_how";
+.menu_small {
+  .navigation {
+    height: 85vh;
+  }
+}
